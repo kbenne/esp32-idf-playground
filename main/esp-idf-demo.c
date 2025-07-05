@@ -1,9 +1,7 @@
-#include "bacnet.h"
 #include "esp_log.h"
 #include "esp_system.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include <stdio.h>
 
 static const char *TAG = "BACnet_Demo";
 

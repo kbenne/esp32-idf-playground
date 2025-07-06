@@ -3,8 +3,12 @@
 
 static const char *TAG = "BACnet_Demo";
 
+bool bip_init(char *ifname);
+
 void app_main(void) {
   ESP_LOGI(TAG, "Starting BACnet demo application");
+
+  bip_init(NULL);
 
   /* Main application loop */
   while (1) {

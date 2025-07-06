@@ -164,15 +164,40 @@ The BACnet implementation can be configured through several methods:
 
 3. **Object Configuration** - Add, configure, and update objects as needed in your application
 
-## ESP32 Integration
+## ESP32-C6 Integration with W5500 Ethernet Controller
 
-This implementation integrates with the ESP32 platform through:
+This implementation integrates with the ESP32-C6 platform through:
 
+- W5500 Ethernet controller connected via SPI
 - Socket operations through lwIP
 - Time functions through FreeRTOS and ESP-IDF's timer APIs
-- Integration with the ESP32 Ethernet driver
+- Integration with the ESP-IDF Ethernet driver API
 
 The integration uses the standard BACnet/IP datalink layer with ESP32-specific networking APIs.
+
+### W5500 Ethernet Connection
+
+The ESP32-C6 doesn't have a built-in Ethernet MAC, so we use an external W5500 Ethernet controller:
+
+1. **Hardware Connection**:
+   - W5500 is connected to ESP32-C6 via SPI
+   - Default pin connections (configurable in `ethernet_config.h`):
+     - SPI MISO: GPIO 13
+     - SPI MOSI: GPIO 11
+     - SPI SCLK: GPIO 12
+     - SPI CS: GPIO 10
+     - INT: GPIO 4
+     - Reset: GPIO 5 (optional)
+
+2. **SPI Configuration**:
+   - Uses SPI2_HOST
+   - Clock speed: 25 MHz
+   - SPI Mode: 0
+   - Transaction queue size: 20
+
+3. **Integration with BACnet**:
+   - The W5500 appears as a standard network interface to the TCP/IP stack
+   - BACnet/IP operates on top of this network interface without modification
 
 ## Compiler Flags
 

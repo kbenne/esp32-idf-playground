@@ -77,39 +77,39 @@ idf_component_register(SRCS
     
     # Handler files (server-side) - Process incoming requests and generate responses
     "bacnet-stack/src/bacnet/basic/service/h_apdu.c"           # Handle Application Protocol Data Units (main entry point)
-    "bacnet-stack/src/bacnet/basic/service/h_alarm_ack.c"      # Handle alarm acknowledgment requests
-    "bacnet-stack/src/bacnet/basic/service/h_arf.c"            # Handle Atomic Read File requests
-    "bacnet-stack/src/bacnet/basic/service/h_arf_a.c"          # Process Atomic Read File ACK responses
-    "bacnet-stack/src/bacnet/basic/service/h_awf.c"            # Handle Atomic Write File requests
-    "bacnet-stack/src/bacnet/basic/service/h_ccov.c"           # Handle confirmed Change of Value notifications
-    "bacnet-stack/src/bacnet/basic/service/h_cov.c"            # Handle Change of Value subscription requests
-    "bacnet-stack/src/bacnet/basic/service/h_create_object.c"  # Handle dynamic object creation requests
-    "bacnet-stack/src/bacnet/basic/service/h_dcc.c"            # Handle Device Communication Control requests
-    "bacnet-stack/src/bacnet/basic/service/h_delete_object.c"  # Handle dynamic object deletion requests
-    "bacnet-stack/src/bacnet/basic/service/h_gas_a.c"          # Process Get Alarm Summary ACK responses
-    "bacnet-stack/src/bacnet/basic/service/h_get_alarm_sum.c"  # Handle Get Alarm Summary requests
-    "bacnet-stack/src/bacnet/basic/service/h_getevent.c"       # Handle Get Event Information requests
-    "bacnet-stack/src/bacnet/basic/service/h_getevent_a.c"     # Process Get Event Information ACK responses
+    # "bacnet-stack/src/bacnet/basic/service/h_alarm_ack.c"      # Handle alarm acknowledgment requests
+    # "bacnet-stack/src/bacnet/basic/service/h_arf.c"            # Handle Atomic Read File requests
+    # "bacnet-stack/src/bacnet/basic/service/h_arf_a.c"          # Process Atomic Read File ACK responses
+    # "bacnet-stack/src/bacnet/basic/service/h_awf.c"            # Handle Atomic Write File requests
+    # "bacnet-stack/src/bacnet/basic/service/h_ccov.c"           # Handle confirmed Change of Value notifications
+    # "bacnet-stack/src/bacnet/basic/service/h_cov.c"            # Handle Change of Value subscription requests
+    # "bacnet-stack/src/bacnet/basic/service/h_create_object.c"  # Handle dynamic object creation requests
+    # "bacnet-stack/src/bacnet/basic/service/h_dcc.c"            # Handle Device Communication Control requests
+    # "bacnet-stack/src/bacnet/basic/service/h_delete_object.c"  # Handle dynamic object deletion requests
+    # "bacnet-stack/src/bacnet/basic/service/h_gas_a.c"          # Process Get Alarm Summary ACK responses
+    # "bacnet-stack/src/bacnet/basic/service/h_get_alarm_sum.c"  # Handle Get Alarm Summary requests
+    # "bacnet-stack/src/bacnet/basic/service/h_getevent.c"       # Handle Get Event Information requests
+    # "bacnet-stack/src/bacnet/basic/service/h_getevent_a.c"     # Process Get Event Information ACK responses
     "bacnet-stack/src/bacnet/basic/service/h_iam.c"            # Handle I-Am responses (device discovery)
-    "bacnet-stack/src/bacnet/basic/service/h_ihave.c"          # Handle I-Have notifications
-    "bacnet-stack/src/bacnet/basic/service/h_list_element.c"   # Handle Add/Remove List Element requests
-    "bacnet-stack/src/bacnet/basic/service/h_lso.c"            # Handle Life Safety Operation requests
+    # "bacnet-stack/src/bacnet/basic/service/h_ihave.c"          # Handle I-Have notifications
+    # "bacnet-stack/src/bacnet/basic/service/h_list_element.c"   # Handle Add/Remove List Element requests
+    # "bacnet-stack/src/bacnet/basic/service/h_lso.c"            # Handle Life Safety Operation requests
     "bacnet-stack/src/bacnet/basic/service/h_noserv.c"         # Handle unsupported services
-    "bacnet-stack/src/bacnet/basic/service/h_rd.c"             # Handle Reinitialize Device requests
+    # "bacnet-stack/src/bacnet/basic/service/h_rd.c"             # Handle Reinitialize Device requests
     "bacnet-stack/src/bacnet/basic/service/h_rp.c"             # Handle ReadProperty requests
     "bacnet-stack/src/bacnet/basic/service/h_rp_a.c"           # Process ReadProperty ACK responses
-    "bacnet-stack/src/bacnet/basic/service/h_rpm.c"            # Handle ReadPropertyMultiple requests
-    "bacnet-stack/src/bacnet/basic/service/h_rpm_a.c"          # Process ReadPropertyMultiple ACK responses
-    "bacnet-stack/src/bacnet/basic/service/h_rr.c"             # Handle ReadRange requests
-    "bacnet-stack/src/bacnet/basic/service/h_rr_a.c"           # Process ReadRange ACK responses
-    "bacnet-stack/src/bacnet/basic/service/h_ts.c"             # Handle TimeSynchronization requests
-    "bacnet-stack/src/bacnet/basic/service/h_ucov.c"           # Handle unconfirmed Change of Value notifications
-    "bacnet-stack/src/bacnet/basic/service/h_upt.c"            # Handle Unconfirmed Private Transfer requests
-    "bacnet-stack/src/bacnet/basic/service/h_whohas.c"         # Handle Who-Has requests (object discovery)
+    # "bacnet-stack/src/bacnet/basic/service/h_rpm.c"            # Handle ReadPropertyMultiple requests
+    # "bacnet-stack/src/bacnet/basic/service/h_rpm_a.c"          # Process ReadPropertyMultiple ACK responses
+    # "bacnet-stack/src/bacnet/basic/service/h_rr.c"             # Handle ReadRange requests
+    # "bacnet-stack/src/bacnet/basic/service/h_rr_a.c"           # Process ReadRange ACK responses
+    # "bacnet-stack/src/bacnet/basic/service/h_ts.c"             # Handle TimeSynchronization requests
+    # "bacnet-stack/src/bacnet/basic/service/h_ucov.c"           # Handle unconfirmed Change of Value notifications
+    # "bacnet-stack/src/bacnet/basic/service/h_upt.c"            # Handle Unconfirmed Private Transfer requests
+    # "bacnet-stack/src/bacnet/basic/service/h_whohas.c"         # Handle Who-Has requests (object discovery)
     "bacnet-stack/src/bacnet/basic/service/h_whois.c"          # Handle Who-Is requests (device discovery)
     "bacnet-stack/src/bacnet/basic/service/h_wp.c"             # Handle WriteProperty requests
-    "bacnet-stack/src/bacnet/basic/service/h_wpm.c"            # Handle WritePropertyMultiple requests
-    "bacnet-stack/src/bacnet/basic/service/h_write_group.c"    # Handle WriteGroup requests
+    # "bacnet-stack/src/bacnet/basic/service/h_wpm.c"            # Handle WritePropertyMultiple requests
+    # "bacnet-stack/src/bacnet/basic/service/h_write_group.c"    # Handle WriteGroup requests
     
     # Service files (client-side) - Initiate requests to other BACnet devices
     "bacnet-stack/src/bacnet/basic/service/s_abort.c"          # Send Abort service messages
@@ -160,33 +160,33 @@ idf_component_register(SRCS
     "bacnet-stack/src/bacnet/basic/object/blo.c"               # Binary Lighting Output object
     "bacnet-stack/src/bacnet/basic/object/bo.c"                # Binary Output object
     "bacnet-stack/src/bacnet/basic/object/bv.c"                # Binary Value object
-    "bacnet-stack/src/bacnet/basic/object/calendar.c"          # Calendar object for scheduling
-    "bacnet-stack/src/bacnet/basic/object/channel.c"           # Channel object for routing communications
-    "bacnet-stack/src/bacnet/basic/object/color_object.c"      # Color object for lighting control
-    "bacnet-stack/src/bacnet/basic/object/color_temperature.c" # Color Temperature object for lighting
-    "bacnet-stack/src/bacnet/basic/object/command.c"           # Command object for sequenced operations
-    "bacnet-stack/src/bacnet/basic/object/credential_data_input.c" # Credential Data Input object
-    "bacnet-stack/src/bacnet/basic/object/csv.c"               # CharacterString Value object
-    "bacnet-stack/src/bacnet/basic/object/device.c"            # Device object (main object in all devices)
-    "bacnet-stack/src/bacnet/basic/object/iv.c"                # Integer Value object
-    "bacnet-stack/src/bacnet/basic/object/lc.c"                # Load Control object for demand response
-    "bacnet-stack/src/bacnet/basic/object/lo.c"                # Lighting Output object
-    "bacnet-stack/src/bacnet/basic/object/lsp.c"               # Life Safety Point object
-    "bacnet-stack/src/bacnet/basic/object/lsz.c"               # Life Safety Zone object
-    "bacnet-stack/src/bacnet/basic/object/ms-input.c"          # Multi-state Input object
-    "bacnet-stack/src/bacnet/basic/object/mso.c"               # Multi-state Output object
-    "bacnet-stack/src/bacnet/basic/object/msv.c"               # Multi-state Value object
-    "bacnet-stack/src/bacnet/basic/object/nc.c"                # Notification Class object for alarms
-    "bacnet-stack/src/bacnet/basic/object/netport.c"           # Network Port object for comm settings
+    # "bacnet-stack/src/bacnet/basic/object/calendar.c"          # Calendar object for scheduling
+    # "bacnet-stack/src/bacnet/basic/object/channel.c"           # Channel object for routing communications
+    # "bacnet-stack/src/bacnet/basic/object/color_object.c"      # Color object for lighting control
+    # "bacnet-stack/src/bacnet/basic/object/color_temperature.c" # Color Temperature object for lighting
+    # "bacnet-stack/src/bacnet/basic/object/command.c"           # Command object for sequenced operations
+    # "bacnet-stack/src/bacnet/basic/object/credential_data_input.c" # Credential Data Input object
+    # "bacnet-stack/src/bacnet/basic/object/csv.c"               # CharacterString Value object
+    # "bacnet-stack/src/bacnet/basic/object/device.c"            # Device object (main object in all devices)
+    # "bacnet-stack/src/bacnet/basic/object/iv.c"                # Integer Value object
+    # "bacnet-stack/src/bacnet/basic/object/lc.c"                # Load Control object for demand response
+    # "bacnet-stack/src/bacnet/basic/object/lo.c"                # Lighting Output object
+    # "bacnet-stack/src/bacnet/basic/object/lsp.c"               # Life Safety Point object
+    # "bacnet-stack/src/bacnet/basic/object/lsz.c"               # Life Safety Zone object
+    # "bacnet-stack/src/bacnet/basic/object/ms-input.c"          # Multi-state Input object
+    # "bacnet-stack/src/bacnet/basic/object/mso.c"               # Multi-state Output object
+    # "bacnet-stack/src/bacnet/basic/object/msv.c"               # Multi-state Value object
+    # "bacnet-stack/src/bacnet/basic/object/nc.c"                # Notification Class object for alarms
+    # "bacnet-stack/src/bacnet/basic/object/netport.c"           # Network Port object for comm settings
     "bacnet-stack/src/bacnet/basic/object/objects.c"           # Object table and management core
-    "bacnet-stack/src/bacnet/basic/object/osv.c"               # OctetString Value object
-    "bacnet-stack/src/bacnet/basic/object/piv.c"               # Positive Integer Value object
-    "bacnet-stack/src/bacnet/basic/object/program.c"           # Program object for executable logic
-    "bacnet-stack/src/bacnet/basic/object/sc_netport.c"        # Secure Connect Network Port object
-    "bacnet-stack/src/bacnet/basic/object/schedule.c"          # Schedule object for time-based control
-    "bacnet-stack/src/bacnet/basic/object/structured_view.c"   # Structured View for organizing objects
-    "bacnet-stack/src/bacnet/basic/object/time_value.c"        # Time Value object
-    "bacnet-stack/src/bacnet/basic/object/trendlog.c"          # Trend Log object for data recording
+    # "bacnet-stack/src/bacnet/basic/object/osv.c"               # OctetString Value object
+    # "bacnet-stack/src/bacnet/basic/object/piv.c"               # Positive Integer Value object
+    # "bacnet-stack/src/bacnet/basic/object/program.c"           # Program object for executable logic
+    # "bacnet-stack/src/bacnet/basic/object/sc_netport.c"        # Secure Connect Network Port object
+    # "bacnet-stack/src/bacnet/basic/object/schedule.c"          # Schedule object for time-based control
+    # "bacnet-stack/src/bacnet/basic/object/structured_view.c"   # Structured View for organizing objects
+    # "bacnet-stack/src/bacnet/basic/object/time_value.c"        # Time Value object
+    # "bacnet-stack/src/bacnet/basic/object/trendlog.c"          # Trend Log object for data recording
 
     # Core Utilities - Essential utilities and data structures for BACnet stack operation
     "bacnet-stack/src/bacnet/basic/binding/address.c"          # Address binding and caching
@@ -225,9 +225,24 @@ idf_component_register(SRCS
     "bacnet-stack/src/bacnet/basic/server/bacnet_basic.c"      # Basic server implementation
     "bacnet-stack/src/bacnet/basic/server/bacnet_port.c"       # Generic port implementation
     "bacnet-stack/src/bacnet/basic/server/bacnet_port_ipv4.c"  # IPv4 port implementation
+    
+    # Add datetime helper functions to fix linking errors
+    "bacnet-stack/src/bacnet/basic/sys/days.c"                 # Days and date helpers
+    "bacnet-stack/src/bacnet/basic/sys/linear.c"               # Linear interpolation functions
+    "bacnet-stack/src/bacnet/basic/sys/debug.c"                # Debug functions
+    "bacnet-stack/src/bacnet/basic/sys/datetime_mstimer.c"     # Datetime with timer
+    "bacnet-stack/src/bacnet/basic/sys/dst.c"                  # Daylight saving time
+    "bacnet-stack/src/bacnet/basic/sys/color_rgb.c"            # Color functions
+    "bacnet-stack/src/bacnet/basic/sys/lighting_command.c"     # Lighting commands
 
-    PRIV_INCLUDE_DIRS "./bacnet-stack/src/"
-    REQUIRES lwip esp_timer
+    # ESP32-specific BACnet Port - Adapter for BACnet on ESP32 platform
+    # "esp32/bacnet.c"                                        # BACnet/IP implementation for ESP32
+    "esp32/bacnet_port_esp32.c"                             # ESP32 port interface
+    "esp32/bip_esp32.c"                                     # BACnet/IP stub implementations
+    "esp32/device_esp32.c"                                  # Device object with reduced object table
+
+    PRIV_INCLUDE_DIRS "./bacnet-stack/src/" "./esp32/"
+    REQUIRES lwip esp_timer esp_netif
 )
 
 # Disable format warnings for BACnet stack - ESP32 treats uint32_t as long unsigned int

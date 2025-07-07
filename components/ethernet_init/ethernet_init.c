@@ -108,11 +108,11 @@ esp_err_t w5500_eth_init(esp_eth_handle_t *eth_handle_out) {
   /* Set MAC address (use ESP32's base MAC address with locally administered bit
    * set) */
   uint8_t mac_addr[6];
-  ESP_GOTO_ON_ERROR(esp_read_mac(mac_addr, ESP_MAC_ETH), err, TAG,
+  ESP_GOTO_ON_ERROR(esp_read_mac(mac_addr, ESP_MAC_WIFI_STA), err, TAG,
                     "Failed to get MAC address");
 
-  /* Set locally administered bit */
-  mac_addr[0] |= 0x02;
+  mac_addr[0] |= 0x02; // Set locally administered bit
+  mac_addr[0] &= 0xFE; // Clear multicast bit
   ESP_GOTO_ON_ERROR(esp_eth_ioctl(eth_handle, ETH_CMD_S_MAC_ADDR, mac_addr),
                     err, TAG, "Failed to set MAC address");
 

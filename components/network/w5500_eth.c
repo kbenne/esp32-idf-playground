@@ -5,7 +5,7 @@
  * to focus only on W5500 SPI Ethernet controller
  */
 
-#include "ethernet_init.h"
+#include "w5500_eth.h"
 #include "driver/gpio.h"
 #include "driver/spi_master.h"
 #include "esp_check.h"
@@ -118,9 +118,6 @@ esp_err_t w5500_eth_init(esp_eth_handle_t *eth_handle_out) {
 
   /* Return the Ethernet handle */
   *eth_handle_out = eth_handle;
-  ESP_LOGI(TAG, "W5500 Ethernet driver initialized successfully");
-  ESP_LOGI(TAG, "MAC address: %02x:%02x:%02x:%02x:%02x:%02x", mac_addr[0],
-           mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
 
   return ESP_OK;
 

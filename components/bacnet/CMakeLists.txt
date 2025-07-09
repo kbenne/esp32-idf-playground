@@ -240,10 +240,11 @@ idf_component_register(SRCS
     "bacnet-stack/src/bacnet/basic/sys/lighting_command.c"     # Lighting commands
 
     "bacnet-stack/ports/lwip/bip.c"
-    "ports/esp32.c"
+    "ports/lwip/bip.c"
+    "ports/esp32/esp32.c"
     "bacnet.c"
 
-    PRIV_INCLUDE_DIRS "./bacnet-stack/src/" "./lwip/"
+    PRIV_INCLUDE_DIRS "./bacnet-stack/src/" "./bacnet-stack/ports/lwip/"
     INCLUDE_DIRS "./"
     REQUIRES lwip esp_timer esp_netif
 )
